@@ -4,7 +4,7 @@ import window from "global"
 import { Nav, Navbar, Collapse, NavbarToggler, Container } from "reactstrap"
 import Navitem from "./navitem"
 
-const Nav1 = (props) => {
+const Nav2 = (props) => {
 
     //Nacbar Toggler
     const [isOpen, setIsOpen] = useState(false);
@@ -22,17 +22,23 @@ const Nav1 = (props) => {
 
     return (
         <Fragment>
-            <Navbar className="navbar-transparent fixed-top" expand="md">
+            <Navbar className="navbar-expand-lg fixed-top">
                 <Container>
-                    <Link className='navbar-brand' to='/'>Navbar</Link>
-                    <NavbarToggler onClick={toggle} />
-                    <Collapse isOpen={isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
+                    <Link className='navbar-brand d-lg-none' to='/'>Navbar</Link>
+                    <NavbarToggler data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" onClick={toggle} />
+                    <Collapse id="navbarToggle" className="justify-content-between" isOpen={isOpen} navbar>
+                        <Nav navbar>
                             <Navitem name='Home' url='/' />
                             <Navitem name='About' url='about' />
                             <Navitem name='Services' url='services' />
-                            <Navitem name='Contact' url='contact' />
                         </Nav>
+                        <Link className='navbar-brand d-none d-lg-block' to='/'>Navbar</Link>
+                        <Nav navbar>
+                            <Navitem name='Home' url='/' />
+                            <Navitem name='About' url='about' />
+                            <Navitem name='Services' url='services' />
+                        </Nav>
+                        
                     </Collapse>
                 </Container>
             </Navbar>
@@ -40,4 +46,4 @@ const Nav1 = (props) => {
     )
 }
 
-export default Nav1
+export default Nav2
