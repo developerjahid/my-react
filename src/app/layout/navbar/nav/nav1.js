@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from "react-router-dom"
+import window from "global"
 import { Nav, Navbar, Collapse, NavbarToggler, Container } from "reactstrap"
 import Navitem from "./navitem"
 
@@ -23,7 +24,7 @@ const Nav1 = (props) => {
         <Fragment>
             <Navbar className="navbar-transparent fixed-top" expand="md">
                 <Container>
-                    <Link className='navbar-brand' to='/'>Navbar</Link>
+                    <Link className='navbar-brand' to='/'>Navbar1</Link>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="ml-auto" navbar>
