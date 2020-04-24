@@ -1,12 +1,11 @@
 import React, { Component, Fragment} from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { } from "reactstrap"
 import Layout from "./layout/layout"
 import Home from "./components/pages/home"
 import About from "./components/pages/about"
 import Services from "./components/pages/services"
 import Contact from "./components/pages/contact"
-import "./styles/app.css"
+import "./styles/App.scss"
 
 class App extends Component{
   render() {
